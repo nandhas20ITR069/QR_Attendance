@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session and Actions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            width: 60%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin-right: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[name="invite"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        button[name="scan"] {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        /* Responsiveness */
+        @media screen and (max-width: 768px) {
+            form {
+                width: 80%;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Enter Session Details</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="session">Enter Session:</label>
+        <input type="text" id="session" name="session" required><br><br>
+        <button type="submit" name="invite">Send Invitations</button>
+        <button type="submit" name="scan">Scan QR Codes</button>
+    </form>
+</body>
+</html>
